@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sliding Letters with jQuery</title>
+		<meta charset="UTF-8" />
+        <meta name="description" content="Sliding Letters with jQuery" />
+        <meta name="keywords" content="jquery, letters, lettering, menu, navigation, sliding, animation, menu"/>
+		<meta name="author" content="Codrops" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bigshot+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+		<div class="ob"><img src="images/sand.jpg" alt="background" /></div>
+		<h1><strong>The Beach, using Sliding Letters with jQuery!</strong></h1>
+		<ul id="sl_menu" class="sl_menu">
+			<li>
+				<a href="#">Home</a>/
+			</li>
+			<li>
+				<a href="#">Vacation</a>/
+			</li>
+			<li>
+				<a href="#">Photos</a>/
+			</li>
+			<li>
+				<a href="#">Location</a>
+			</li>
+		</ul>
+		<div class="sl_examples">
+			<a href="#" id="example1" data-hover="Heat">Beach</a>
+			<a href="#" id="example2" data-hover="Water">Pictures</a>
+			<a href="#" id="example3" data-hover="Fun">Sun</a>
+			<a href="#" id="example4" data-hover="Family">Sand</a>
+			<a href="#" id="example5" data-hover="Friends">Ocean</a>
+		</div>
+	
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.lettering.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.hoverwords.js"></script>
+		
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('#sl_menu').find('li:not(:last) > a')
+							 .hoverwords({ overlay:true })
+							 .end()
+							 .find('li:last > a')
+							 .hoverwords({ overlay:true , dir:'rightleft' });
+				
+				$('#example1').hoverwords({ delay:50 });
+				$('#example2').hoverwords();
+				$('#example3').hoverwords();
+				$('#example4').hoverwords({ overlay:true});
+				$('#example5').hoverwords({ delay:60 });
+				
+			});
+		</script>
+    </body>
+</html>
