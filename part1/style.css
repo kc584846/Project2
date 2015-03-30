@@ -14,13 +14,13 @@
  font-size: 2em;    
 }
  
-.faq_answer_container {
- height: 0px;
- overflow: hidden;
+.faq_answer {
+    display:none;
  padding: 0px;   
  font-family: 'Dosis', sans-serif;  
  color: gray;
  font-size: 2em;
+    padding-right: 35%;
 }
 
 h1{
