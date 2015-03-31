@@ -2,6 +2,7 @@ $(document).ready(function() {
  
  $('.faq_question').click(function() {
  //answer should appear
+     $(this).next('.faq_answer').toggle();
      
      
      
